@@ -53,8 +53,11 @@ let server;
 
 const startServer = async () => {
   server = app.listen(config.port, () => {
+    const url = `http://localhost:${config.port}`;
     logger.info(`FB-Post service running on port ${config.port}`);
     logger.info(`Environment: ${config.nodeEnv}`);
+    logger.info(`Open API: ${url}`);
+    logger.info(`Health check: ${url}/api/health`);
   });
 };
 
