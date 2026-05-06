@@ -4,8 +4,10 @@ const helmet = require('helmet');
 const rateLimit = require('express-rate-limit');
 const { StatusCodes } = require('http-status-codes');
 const config = require('./config');
+const connectDB = require('./config/database');
 const logger = require('./utils/logger');
-const routes = require('./routes/post');
+const postRoutes = require('./routes/post');
+const scheduledPostRoutes = require('./routes/scheduledPost');
 const { errorHandler } = require('./middleware/errorHandler');
 
 const app = express();
@@ -35,7 +37,8 @@ app.use((req, res, next) => {
   next();
 });
 
-app.use('/api', routes);
+app.use('/api', postRoutes);
+app.use('/api/scheduled-posts', scheduledPostRoutes);
 
 app.use((req, res) => {
   res.status(StatusCodes.NOT_FOUND).json({
@@ -52,6 +55,8 @@ app.use(errorHandler);
 let server;
 
 const startServer = async () => {
+  await connectDB();
+
   server = app.listen(config.port, () => {
     const url = `http://localhost:${config.port}`;
     logger.info(`FB-Post service running on port ${config.port}`);

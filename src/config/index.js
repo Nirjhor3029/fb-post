@@ -1,6 +1,6 @@
 require('dotenv').config();
 
-const requiredEnvVars = ['FACEBOOK_PAGE_ID', 'FACEBOOK_ACCESS_TOKEN'];
+const requiredEnvVars = ['FACEBOOK_PAGE_ID', 'FACEBOOK_ACCESS_TOKEN', 'MONGODB_URI'];
 
 const missing = requiredEnvVars.filter((key) => !process.env[key]);
 
@@ -15,10 +15,11 @@ module.exports = {
   facebook: {
     pageId: process.env.FACEBOOK_PAGE_ID,
     accessToken: process.env.FACEBOOK_ACCESS_TOKEN,
-    apiVersion: process.env.FACEBOOK_API_VERSION || 'v18.0',
+    apiVersion: process.env.FACEBOOK_API_VERSION || 'v24.0.0',
   },
   rateLimit: {
     windowMs: parseInt(process.env.RATE_LIMIT_WINDOW_MS, 10) || 900000,
     max: parseInt(process.env.RATE_LIMIT_MAX, 10) || 100,
   },
+  mongodbUri: process.env.MONGODB_URI,
 };
