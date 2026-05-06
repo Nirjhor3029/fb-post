@@ -42,9 +42,8 @@ const postSchema = new mongoose.Schema(
 
 postSchema.index({ is_posted: 1, scheduled_at: 1 });
 
-postSchema.pre('save', function (next) {
+postSchema.pre('save', function () {
   this.updated_at = Date.now();
-  next();
 });
 
 const Post = mongoose.model('Post', postSchema);

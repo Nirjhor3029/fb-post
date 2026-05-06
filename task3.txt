@@ -1,0 +1,4 @@
+http://localhost:3000/api/scheduled-posts/process-next ei url e 
+{"success":false,"error":{"code":"FACEBOOK_API_ERROR","message":"Failed to post to Facebook"}}
+emon keno asteche
+while http://localhost:3000/api/post its working fine.
