@@ -8,7 +8,7 @@ const processNextPost = async (req, res, next) => {
 
     if (!result.success) {
       throw new AppError(
-        result.message,
+        result.error ? result.error.message : result.message,
         result.error ? 'FACEBOOK_API_ERROR' : 'NO_PENDING_POSTS',
         result.error ? StatusCodes.BAD_REQUEST : StatusCodes.OK
       );
