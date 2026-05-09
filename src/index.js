@@ -1,4 +1,6 @@
 const express = require("express");
+const path = require("path");
+const fs = require("fs");
 const cors = require("cors");
 const helmet = require("helmet");
 const rateLimit = require("express-rate-limit");
@@ -13,7 +15,9 @@ const { errorHandler } = require("./middleware/errorHandler");
 const app = express();
 app.set("trust proxy", 1);
 
-app.use(helmet());
+app.use(helmet({
+  crossOriginResourcePolicy: { policy: "cross-origin" },
+}));
 app.use(cors());
 app.use(express.json({ limit: "10kb" }));
 
@@ -36,6 +40,18 @@ app.use(limiter);
 app.use((req, res, next) => {
   logger.info(`${req.method} ${req.path} - ${req.ip}`);
   next();
+});
+
+app.get("/privacy-policy", (req, res) => {
+  const filePath = path.join(__dirname, "..", "privacy-policy.txt");
+  fs.readFile(filePath, "utf-8", (err, content) => {
+    if (err) {
+      logger.error("Failed to read privacy-policy.txt: " + err.message);
+      return res.status(500).send("Internal Server Error");
+    }
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.send(content);
+  });
 });
 
 app.use("/api", postRoutes);

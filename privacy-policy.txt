@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Privacy Policy</title>
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    body {
+      font-family: Arial, sans-serif;
+      background: #f5f7fb;
+      color: #222;
+      line-height: 1.7;
+      padding: 40px 20px;
+    }
+
+    .container {
+      max-width: 850px;
+      margin: 0 auto;
+      background: #ffffff;
+      padding: 50px;
+      border-radius: 16px;
+      box-shadow: 0 10px 30px rgba(0, 0, 0, 0.08);
+    }
+
+    h1 {
+      font-size: 38px;
+      margin-bottom: 10px;
+      color: #111827;
+    }
+
+    .updated {
+      color: #6b7280;
+      margin-bottom: 35px;
+      font-size: 14px;
+    }
+
+    h2 {
+      margin-top: 35px;
+      margin-bottom: 12px;
+      font-size: 24px;
+      color: #1f2937;
+    }
+
+    p {
+      margin-bottom: 16px;
+      color: #374151;
+    }
+
+    ul {
+      padding-left: 22px;
+      margin-bottom: 20px;
+    }
+
+    li {
+      margin-bottom: 10px;
+      color: #374151;
+    }
+
+    .footer {
+      margin-top: 50px;
+      padding-top: 20px;
+      border-top: 1px solid #e5e7eb;
+      font-size: 14px;
+      color: #6b7280;
+    }
+
+    a {
+      color: #2563eb;
+      text-decoration: none;
+    }
+
+    a:hover {
+      text-decoration: underline;
+    }
+
+    @media (max-width: 768px) {
+      .container {
+        padding: 30px 22px;
+      }
+
+      h1 {
+        font-size: 30px;
+      }
+
+      h2 {
+        font-size: 21px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Privacy Policy</h1>
+    <p class="updated">Last Updated: May 9, 2026</p>
+
+    <p>
+      This Privacy Policy explains how our application collects, uses, and protects information when using Facebook Login and Facebook Graph API services.
+    </p>
+
+    <h2>Information We Collect</h2>
+    <p>
+      When you connect your Facebook account to our application, we may collect limited information necessary to provide posting and scheduling functionality.
+    </p>
+
+    <ul>
+      <li>Facebook Page IDs</li>
+      <li>Facebook Page Names</li>
+      <li>Access Tokens provided by Facebook</li>
+      <li>Post scheduling and publishing data</li>
+    </ul>
+
+    <h2>How We Use Your Information</h2>
+    <p>
+      The collected information is used solely for:
+    </p>
+
+    <ul>
+      <li>Publishing posts to Facebook Pages you manage</li>
+      <li>Scheduling automated posts</li>
+      <li>Managing Facebook Page integrations</li>
+      <li>Improving application functionality and reliability</li>
+    </ul>
+
+    <h2>Data Protection</h2>
+    <p>
+      We take reasonable security measures to protect user data and access tokens from unauthorized access, disclosure, or misuse.
+    </p>
+
+    <h2>Third-Party Services</h2>
+    <p>
+      Our application uses Facebook APIs and services provided by Meta Platforms, Inc. Your use of Facebook remains subject to Facebook's own policies and terms.
+    </p>
+
+    <h2>Data Sharing</h2>
+    <p>
+      We do not sell, rent, or trade your personal information or Facebook data to third parties.
+    </p>
+
+    <h2>User Rights</h2>
+    <p>
+      You may revoke application permissions at any time through your Facebook account settings.
+    </p>
+
+    <h2>Changes to This Policy</h2>
+    <p>
+      We may update this Privacy Policy periodically. Any changes will be reflected on this page with an updated revision date.
+    </p>
+
+    <h2>Contact</h2>
+    <p>
+      If you have any questions regarding this Privacy Policy, please contact us at:
+    </p>
+
+    <p>
+      <strong>Email:</strong> sazzad3029@gmail.com
+    </p>
+
+    <div class="footer">
+      © 2026 All Rights Reserved.
+    </div>
+  </div>
+</body>
+</html>
